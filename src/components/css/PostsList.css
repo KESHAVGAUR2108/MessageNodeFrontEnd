@@ -1,0 +1,71 @@
+.container.posts-list {
+	width: 50%;
+}
+
+.card {
+	border: 2px rgb(44, 1, 40) solid;
+	border-radius: 8px;
+}
+
+.card-title {
+	color: rgb(87, 25, 84);
+	font-size: larger;
+	font-weight: bold;
+}
+
+.card-link {
+	text-decoration: none;
+}
+
+.view:hover {
+	color: rgb(148, 12, 167);
+}
+.view,
+h4,
+h5 {
+	color: rgb(69, 10, 77);
+}
+
+.edit:hover {
+	color: rgb(141, 32, 243);
+}
+.edit {
+	color: rgb(82, 6, 153);
+}
+
+.delete:hover {
+	color: rgb(255, 9, 9);
+}
+.delete {
+	color: rgba(180, 32, 32, 0.726);
+}
+
+.card-link {
+	cursor: pointer;
+}
+
+.post-list {
+	margin-left: 45%;
+	color: rgb(44, 1, 40);
+}
+
+@media only screen and (max-width: 450px) {
+	* {
+		font-size: small;
+	}
+
+	.posts-list {
+		width: 100% !important;
+		margin: 10px 0px;
+	}
+}
+
+@media only screen and (min-width: 451px) and (max-width: 720px) {
+	* {
+		font-size: small;
+	}
+
+	.posts-list {
+		width: 70% !important;
+	}
+}

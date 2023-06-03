@@ -1,0 +1,27 @@
+.post-title {
+	color: #571954;
+}
+
+.card-subtitle {
+	color: rgb(124, 124, 124);
+	font-weight: bold;
+	font-size: small !important;
+}
+
+.post-img {
+	width: 45%;
+}
+
+@media only screen and (max-width: 450px) {
+	* {
+		font-size: small !important;
+	}
+
+	.card-subtitle {
+		font-size: smaller !important;
+	}
+
+	.post-img {
+		width: 70%;
+	}
+}

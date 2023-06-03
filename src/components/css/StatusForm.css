@@ -1,0 +1,33 @@
+.input-group {
+	width: 70%;
+}
+
+.search_link {
+	color: rgb(87, 25, 84);
+	font-size: larger;
+	font-weight: 500;
+	height: 100%;
+	padding: 0 6px;
+}
+
+.update-container {
+	padding: 0 !important;
+}
+
+.update-container:hover {
+	background-color: rgb(87, 25, 84);
+}
+
+.search_link:hover {
+	color: white;
+}
+
+@media only screen and (max-width: 450px) {
+	* {
+		font-size: small;
+	}
+
+	.input-group {
+		width: 100%;
+	}
+}

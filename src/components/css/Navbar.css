@@ -1,0 +1,23 @@
+.navbar-custom {
+	background-color: rgb(87, 25, 84);
+	color: white !important;
+}
+
+.brandName {
+	color: white;
+	text-decoration: none;
+	font-size: larger;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 550;
+	border: 1px solid white;
+	padding: 4px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link.active {
+	color: rgb(245, 183, 26);
+}

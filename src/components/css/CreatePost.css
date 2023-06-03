@@ -1,0 +1,56 @@
+.modal-title,
+hr {
+	color: rgb(87, 25, 84);
+	font-weight: bolder;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+.cancel-link {
+	color: rgba(128, 0, 0, 0.863);
+}
+.cancel-link:hover {
+	color: rgba(252, 28, 28, 0.932);
+}
+
+.create-link {
+	color: rgba(6, 87, 6, 0.911);
+}
+.create-link:hover {
+	color: rgb(14, 196, 14);
+}
+
+.modal-body {
+	border: 2px solid rgb(87, 25, 84);
+	border-radius: 5px;
+}
+
+.form-label {
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+	font-weight: 550;
+}
+
+.sub-title {
+	font-size: small;
+}
+
+.create-post {
+	color: rgb(87, 25, 84);
+	font-weight: 600;
+}
+
+a,
+.cancel-link {
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 370px) {
+	.modal {
+		margin-top: 20% !important;
+	}
+}

@@ -134,9 +134,7 @@ class PostsList extends React.Component {
 
 	renderList() {
 		if (this.state.error === null && this.state.data.length === 0) {
-			return (
-				<div className="spinner-border post-list mt-5" role="status"></div>
-			);
+			return <div className="spinner-border ml-5 mt-5" role="status"></div>;
 		}
 
 		if (this.state.data.length === 0) {
@@ -149,7 +147,7 @@ class PostsList extends React.Component {
 		}
 		return this.state.data.map((post) => {
 			return (
-				<div key={post._id.toString()} className="card d-block mb-2">
+				<div key={post._id.toString()} className="card mb-2">
 					<div className="card-body">
 						<p className="card-subtitle mb-2 text-body-secondary">
 							Posted by {this.state.users[post.creator].name} on{" "}
@@ -184,10 +182,8 @@ class PostsList extends React.Component {
 					</div>
 					{this.renderMsg()}
 				</div>
-				<div className="container d-flex flex-column justify-content-center posts-list mt-3">
-					{this.renderList()}
-				</div>
-				;{this.renderModal()}
+				<div className="container posts-list mt-3">{this.renderList()}</div>;
+				{this.renderModal()}
 			</>
 		);
 	}

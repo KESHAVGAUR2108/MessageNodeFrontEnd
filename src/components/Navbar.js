@@ -12,7 +12,6 @@ const NavBar = ({ authorized, setAuthorize, active, setActive }) => {
 	};
 
 	const handleLogOut = (e) => {
-		e.preventDefault();
 		localStorage.clear();
 		setAuthorize(false);
 	};

@@ -134,7 +134,9 @@ class PostsList extends React.Component {
 
 	renderList() {
 		if (this.state.error === null && this.state.data.length === 0) {
-			return <div className="spinner-border ml-5 mt-5" role="status"></div>;
+			return (
+				<div className="spinner-border posts-spinner mt-5" role="status"></div>
+			);
 		}
 
 		if (this.state.data.length === 0) {

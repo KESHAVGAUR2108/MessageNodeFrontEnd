@@ -45,8 +45,11 @@ h5 {
 }
 
 .post-list {
-	/* margin-left: 45%; */
 	color: rgb(44, 1, 40);
+}
+
+.posts-spinner {
+	margin-left: 45%;
 }
 
 @media only screen and (max-width: 450px) {

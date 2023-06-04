@@ -149,7 +149,7 @@ class PostsList extends React.Component {
 		}
 		return this.state.data.map((post) => {
 			return (
-				<div key={post._id.toString()} className="card mb-2">
+				<div key={post._id.toString()} className="card d-block mb-2">
 					<div className="card-body">
 						<p className="card-subtitle mb-2 text-body-secondary">
 							Posted by {this.state.users[post.creator].name} on{" "}
@@ -184,7 +184,7 @@ class PostsList extends React.Component {
 					</div>
 					{this.renderMsg()}
 				</div>
-				<div className="container d-flex justify-content-center flex-column posts-list mt-3">
+				<div className="container d-flex flex-column justify-content-center posts-list mt-3">
 					{this.renderList()}
 				</div>
 				;{this.renderModal()}

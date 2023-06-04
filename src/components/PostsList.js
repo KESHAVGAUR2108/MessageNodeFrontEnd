@@ -180,6 +180,7 @@ class PostsList extends React.Component {
 							data-bs-target="#exampleModal"
 						>
 							NEW POST
+							<br />
 						</button>
 					</div>
 					{this.renderMsg()}

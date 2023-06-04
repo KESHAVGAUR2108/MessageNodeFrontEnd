@@ -1,0 +1,43 @@
+.form {
+	width: 45% !important;
+}
+
+.input-group,
+.btn-submit,
+.btn-success {
+	width: 100%;
+}
+
+.btn.btn-submit {
+	background-color: rgb(105, 28, 101);
+	color: white;
+}
+
+.btn.btn-submit:hover {
+	background-color: rgb(78, 22, 75);
+}
+
+#spinner {
+	position: relative;
+	z-index: 2;
+	margin-top: -440px;
+}
+
+.spinner-border {
+	position: absolute;
+	top: 50%;
+}
+
+@media only screen and (max-width: 450px) {
+	* {
+		font-size: small !important;
+	}
+
+	.form {
+		width: 100% !important;
+	}
+
+	#spinner {
+		margin-top: -368px;
+	}
+}

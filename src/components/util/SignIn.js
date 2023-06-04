@@ -1,7 +1,8 @@
-import "../css/SignIn.css";
+import "../css/Auth.css";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { alterIcon } from "./togglePassword";
+import { showSpinner, hideSpinner } from "./spinner";
 
 const SignIn = ({ setAuthorize, setActive }) => {
 	const [error, setError] = useState(false);
@@ -16,13 +17,15 @@ const SignIn = ({ setAuthorize, setActive }) => {
 			setTimeout(() => {
 				setError(false);
 				setMsg(null);
-			}, 3000);
+			}, 1000);
 			return <div className="alert alert-danger">{msg}</div>;
 		}
 	};
 
 	const onSubmitHandle = (e) => {
 		e.preventDefault();
+
+		showSpinner();
 
 		const data = e.target;
 
@@ -41,6 +44,7 @@ const SignIn = ({ setAuthorize, setActive }) => {
 		})
 			.then((response) => response.json())
 			.then((result) => {
+				hideSpinner();
 				if (result.status === 200) {
 					setAuthorize(true);
 					localStorage.setItem("userId", result.userId);
@@ -74,7 +78,7 @@ const SignIn = ({ setAuthorize, setActive }) => {
 				<label htmlFor="password" className="form-label">
 					Password
 				</label>
-				<div className="input-group mb-3" style={{ width: "100%" }}>
+				<div className="input-group mb-3">
 					<input
 						type="password"
 						id="password"
@@ -102,18 +106,9 @@ const SignIn = ({ setAuthorize, setActive }) => {
 						</svg>
 					</span>
 				</div>
-				<input
-					type="submit"
-					className="btn btn-submit mb-5"
-					style={{ width: "100%" }}
-					value="SignIn"
-				/>
+				<input type="submit" className="btn btn-submit mb-5" value="SignIn" />
 				<br />
-				<Link
-					to="/auth/signup"
-					className="btn btn-success"
-					style={{ width: "100%" }}
-				>
+				<Link to="/auth/signup" className="btn btn-success">
 					Create Account
 				</Link>
 			</form>

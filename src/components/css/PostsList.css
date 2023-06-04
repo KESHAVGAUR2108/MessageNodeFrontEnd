@@ -62,7 +62,7 @@ h5 {
 
 @media only screen and (min-width: 451px) and (max-width: 720px) {
 	* {
-		font-size: small;
+		font-size: medium;
 	}
 
 	.posts-list {

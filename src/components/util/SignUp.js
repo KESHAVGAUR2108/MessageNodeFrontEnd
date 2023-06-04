@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { alterIcon } from "./togglePassword";
-import "../css/SignIn.css";
+import "../css/Auth.css";
+import { showSpinner, hideSpinner } from "./spinner";
 
 const SignUp = ({ setActive }) => {
 	useEffect(() => {
@@ -31,10 +32,14 @@ const SignUp = ({ setActive }) => {
 
 	const onSubmitHandle = (e) => {
 		e.preventDefault();
+
+		showSpinner();
+
 		const data = e.target;
 
 		if (data.password.value !== data.confirmPassword.value) {
 			setError(true);
+			hideSpinner();
 			setMsg("Password does not match with confirm Password!.");
 			return;
 		}
@@ -52,6 +57,7 @@ const SignUp = ({ setActive }) => {
 		})
 			.then((response) => response.json())
 			.then((result) => {
+				hideSpinner();
 				if (result.status === 201) {
 					setMsg(result.message);
 					setTimeout(() => navigate("/"), 1500);
@@ -97,7 +103,7 @@ const SignUp = ({ setActive }) => {
 				<label htmlFor="password" className="form-label">
 					Password
 				</label>
-				<div className="input-group mb-3" style={{ width: "100%" }}>
+				<div className="input-group mb-3">
 					<input
 						type="password"
 						id="password"
@@ -129,7 +135,7 @@ const SignUp = ({ setActive }) => {
 				<label htmlFor="confirmPassword" className="form-label">
 					Confirm Password
 				</label>
-				<div className="input-group" style={{ width: "100%" }}>
+				<div className="input-group">
 					<input
 						type="password"
 						id="confirmPassword"
@@ -159,12 +165,7 @@ const SignUp = ({ setActive }) => {
 						</svg>
 					</span>
 				</div>
-				<input
-					type="submit"
-					className="btn btn-submit mt-4"
-					style={{ width: "100%" }}
-					value="SignUp"
-				/>
+				<input type="submit" className="btn btn-submit mt-4" value="SignUp" />
 			</form>
 		</>
 	);

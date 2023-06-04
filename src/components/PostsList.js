@@ -184,7 +184,7 @@ class PostsList extends React.Component {
 					</div>
 					{this.renderMsg()}
 				</div>
-				<div className="container d-flex flex-column justify-content-center posts-list mt-3">
+				<div className="container d-flex justify-content-center flex-column posts-list mt-3">
 					{this.renderList()}
 				</div>
 				;{this.renderModal()}

@@ -29,11 +29,7 @@ const NavBar = ({ authorized, setAuthorize, active, setActive }) => {
 					>
 						Feed
 					</Link>
-					<Link
-						className={pagePath === "/logout" ? "nav-link active" : "nav-link"}
-						to="/logout"
-						onClick={handleLogOut}
-					>
+					<Link className="nav-link" to="/" onClick={handleLogOut}>
 						LogOut
 					</Link>
 				</>
